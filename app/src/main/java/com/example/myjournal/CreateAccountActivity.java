@@ -28,6 +28,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import Utils.JournalAPI;
+
 public class CreateAccountActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
@@ -122,6 +124,11 @@ public class CreateAccountActivity extends AppCompatActivity {
                                                     Intent intent = new Intent(CreateAccountActivity.this , DashboardActivity.class);
 
                                                     String name = task.getResult().getString("username");
+
+                                                    JournalAPI journalAPI = JournalAPI.getInstance();
+
+                                                    journalAPI.setUserId(currentUserId);
+                                                    journalAPI.setUsername(name);
 
                                                     intent.putExtra("username" , name);
                                                     intent.putExtra("userId" , currentUserId);

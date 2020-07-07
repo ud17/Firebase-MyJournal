@@ -12,7 +12,7 @@
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar_login"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,19 +44,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:textColor="#ffffff"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:textColorHint="#ffffff"
             android:backgroundTint="#ffffff"
             android:paddingBottom="16dp"
             android:layout_margin="4dp"
-            android:id="@+id/email_et"/>
+            android:id="@+id/email_et_login"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/password_et"
+            android:id="@+id/password_et_login"
             android:maxLines="1"
+            android:textColor="#ffffff"
             android:backgroundTint="#ffffff"
             android:textColorHint="#ffffff"
             android:paddingBottom="16dp"

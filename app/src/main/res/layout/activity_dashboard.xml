@@ -4,7 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     android:background="@drawable/basic_layout"
     tools:context=".DashboardActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/progressBar_dash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView_dash"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/upload_dash_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_photo_add"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_dash"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_dash"
+        app:layout_constraintStart_toStartOf="@+id/imageView_dash"
+        app:layout_constraintTop_toTopOf="@+id/imageView_dash" />
+
+    <TextView
+        android:id="@+id/name_dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="textview"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="@+id/imageView_dash"
+        app:layout_constraintTop_toBottomOf="@+id/upload_dash_imageView" />
+
+    <TextView
+        android:id="@+id/today_dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="textview"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_dash"
+        app:layout_constraintStart_toStartOf="@+id/imageView_dash"
+        app:layout_constraintTop_toBottomOf="@+id/name_dash"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_et_dash"
+        android:backgroundTint="@android:color/transparent"
+        android:textColorHint="#ffffff"
+        android:hint="Title"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/alfa_slab_one"
+        android:maxLines="2"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_dash" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:textColorHint="#ffffff"
+        android:hint="Description"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/alfa_slab_one"
+        android:maxLines="5"
+        android:id="@+id/desc_et_dash"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_et_dash" />
+
+    <Button
+        android:id="@+id/savePost_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:fontFamily="@font/amaranth_bold"
+        android:textColor="#ffffff"
+        android:background="@drawable/custom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
