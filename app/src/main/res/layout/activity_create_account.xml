@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:gravity="center"
+    android:background="@drawable/basic_layout"
+    tools:context=".LoginScreenActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_crt_acct"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?android:attr/progressBarStyleLarge"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_margin="12dp"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/amaranth_bold"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColorHint="#ffffff"
+            android:paddingBottom="16dp"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:backgroundTint="#ffffff"
+            android:layout_margin="4dp"
+            android:id="@+id/username_crtAcct"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:backgroundTint="#ffffff"
+            android:textColorHint="#ffffff"
+            android:paddingBottom="16dp"
+            android:layout_margin="4dp"
+            android:id="@+id/email_crt_acct"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_crt_acct"
+            android:maxLines="1"
+            android:hint="Password"
+            android:backgroundTint="#ffffff"
+            android:textColorHint="#ffffff"
+            android:maxLength="25"
+            android:paddingBottom="16dp"
+            android:layout_margin="4dp"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            style=""
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:id="@+id/createAccount_btn"
+            android:fontFamily="@font/amaranth_bold"
+            android:layout_margin="4dp"
+            android:background="@drawable/basic_button"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
