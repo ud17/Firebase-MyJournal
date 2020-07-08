@@ -73,7 +73,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         desc_et = findViewById(R.id.desc_et_dash);
 
         name_tv = findViewById(R.id.name_dash);
-        today_tv = findViewById(R.id.today_dash);
+       // today_tv = findViewById(R.id.today_dash);
 
         progressBar_dash = findViewById(R.id.progressBar_dash);
 
@@ -202,5 +202,11 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         if (firebaseAuth != null){
             firebaseAuth.removeAuthStateListener(authStateListener);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 }

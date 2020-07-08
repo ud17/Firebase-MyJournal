@@ -126,7 +126,7 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
                                                         journalAPI.setUserId(snapshot.getString("userId"));
                                                     }
                                                     progressBar_login.setVisibility(View.INVISIBLE);
-                                                    startActivity(new Intent(LoginScreenActivity.this,DashboardActivity.class));
+                                                    startActivity(new Intent(LoginScreenActivity.this,JournalListActivity.class));
                                                     finish();
 
                                                 }
